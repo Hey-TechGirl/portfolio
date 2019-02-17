@@ -1,0 +1,224 @@
+@font-face {
+    font-family: 'Segoe Script', monospace;
+    src:url("fonts/segoescb.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+div.stripe-pink {
+  position: absolute;
+  top: 19.2vh;
+  height: 30vh;
+  width: 100vw;
+  background-color: rgb(253, 223, 223);
+  -webkit-animation: scale-up-hor-left 1.2s ease-in both;
+  animation: scale-up-hor-left 1.2s ease-in both;
+}
+
+div.marks {
+  position: absolute;
+  top: 11.4vh;
+  right: 7.45vw;
+  height: 5vh;
+  width: 3.2vw;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  z-index: 1;
+}
+
+main {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 67.6vh;
+  width: 78.9vw;
+  background-color: white;
+  -webkit-box-shadow: -15px 15px 40px -8px rgba(0,0,0,0.15);
+  -moz-box-shadow: -15px 15px 40px -8px rgba(0,0,0,0.15);
+  box-shadow: -15px 15px 40px 5px rgba(0,0,0,0.15);
+}
+
+main::before {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  content: "";
+  height: 7vh;
+  width: 7vw;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+
+main::after {
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+  content: "";
+  height: 7vh;
+  width: 45vw;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+div.stripe-grey {
+  position: absolute;
+  top: 3vh;
+  left: 7px;
+  height: 30vh;
+  width: 36.5vw;
+  background-color: rgb(242, 242, 242);
+  -webkit-animation: scale-up-hor-left 0.5s ease-in 0.4s both;
+  animation: scale-up-hor-left 0.5s ease-in 0.4s both;
+}
+
+section {
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+  height: 97.2%;
+  width: 98%;
+}
+
+section::before {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  height: 7vh;
+  width: 7vw;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+section::after {
+  position: absolute;
+  right: 0;
+  content: "";
+  height: 30vh;
+  width: 7vw;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+
+section h1 {
+  position: absolute;
+  top: 16vh;
+  left: 3.3vw; /*rethink for mobile*/
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 6.5vw;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typewriter 2s steps(30) 1s 1 normal both;
+  animation: typewriter 2s steps(30) 1s 1 normal both;
+}
+
+section h1 span {
+  color: rgb(249, 179, 179);
+}
+
+section p span.line {
+
+}
+
+section p {
+  position: absolute;
+  top: 28.3vh;
+  left: 4.8vw;
+  font-family: 'Segoe Script', monospace;
+  font-weight: bold;
+  font-size: 2.2vw;
+  -webkit-animation: slide-in-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
+	animation: slide-in-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
+}
+
+section p::before {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 15%;
+  height: 1px;
+  border-top: 2px solid black;
+}
+
+section p span {
+  position: relative;
+  padding: 0 25px;
+  margin-right: 70px;
+}
+
+/*** animation scale-up-hor-left ***/
+@-webkit-keyframes scale-up-hor-left {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+}
+@keyframes scale-up-hor-left {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+}
+
+/*** animation typing ***/
+@-webkit-keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/*** animation slide-in-top ***/
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
