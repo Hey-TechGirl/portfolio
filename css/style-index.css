@@ -169,10 +169,11 @@ div.stripe-grey {
 
 div.color-palette {
   position: absolute;
-  right: -14px;
+  right: -12px;
   bottom: 80px;
   width: 22px;
-  height: 154px;
+  height: 20vh;
+  z-index: 1;
   -webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
   animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
 }
@@ -234,7 +235,7 @@ div.color-palette div.seven {
 
 div.social-media {
   position: absolute;
-  top: 300px;
+  top: 41.5vh;
 }
 
 div.box {
@@ -590,26 +591,19 @@ section p span {
   }
 }
 
-@media (max-width: 650px) {
-  header nav a {
-    font-size: 0.8em;
-  }
-  div.stripe-grey {
-    width: 45vw;
-  }
+@media (max-width: 700px) {
   section h1 {
-    top: 150px;
-    left: 4.5vw;
-    font-size: 8.2vw;
+    top: 160px;
+    font-size: 7.40vw;
   }
   section p {
-    top: 209px;
-    left: 5.6vw;
-    font-size: 3.1vw;
+    top: 210px;
+    left: 3.85vw;
+    font-size: 2.8vw;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   header nav div#toggle {
     position: absolute;
     top: -58px;
@@ -627,7 +621,7 @@ section p span {
     width: 40px;
     height: 32px;
     display: block;
-    opacity: 1;
+    opacity: 0;
     cursor: pointer;
     z-index: 3;
     -webkit-touch-callout: none;
@@ -636,7 +630,7 @@ section p span {
     position: relative;
     display: block;
     top: 45px;
-    left: 83.5vw;
+    left: 85vw;
     width: 33px;
     height: 4px;
     margin-bottom: 5px;
@@ -704,21 +698,80 @@ section p span {
   }
 }
 
-@media (max-width: 525px) {
+@media (max-width: 575px) {
   header nav input {
     right: -2px;
   }
+  div.stripe-grey {
+    width: 45vw;
+  }
+  section h1 {
+    top: 160px;
+    left: 4.7vw;
+    font-size: 8.2vw;
+  }
+  section p {
+    top: 212px;
+    left: 5.7vw;
+    font-size: 3.1vw;
+  }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   header nav input {
     right: -14px;
+  }
+  div.marks {
+    right: 8vw;
+  }
+}
+
+@media (max-width: 470px) {
+  header nav div#toggle {
+    right: -45px;
+  }
+  div.stripe-grey {
+    width: 50vw;
+  }
+  section h1 {
+    top: 165px;
+    font-size: 9.3vw;
+  }
+  section p {
+    left: 5.5vw;
+    font-size: 3.5vw;
+  }
+  section p::before {
+    width: 13%;
+  }
+  section p span {
+    margin-right: 9vw;
   }
 }
 
 @media (max-width: 400px) {
   header nav input {
-    right: -24px;
+    right: -25px;
+  }
+  div.stripe-pink {
+    height: 180px;
+  }
+  div.stripe-grey {
+    height: 180px;
+  }
+  section h1 {
+    top: 145px;
+    left: 5.5vw;
+  }
+  section p {
+    top: 187px;
+    font-size: 4vw;
+  }
+  section p::before {
+    width: 13%;
+  }
+  section p span {
+    margin-right: 9vw;
   }
 }
 
